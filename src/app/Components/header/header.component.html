@@ -2,9 +2,10 @@
 
   <ul class="d-flex justify-content-between mt-4">
     <i></i>
-    <i>Note</i>
-    <i>To-Do-List</i>
-    <i>Mio Profilo</i>
+    <i></i>
+    <i (mouseover)="hover(1)" (mouseleave)="hover(1)" [ngClass]="{'mouseHover' : mouseHover1}">Note</i>
+    <i (mouseover)="hover(2)" (mouseleave)="hover(2)" [ngClass]="{'mouseHover' : mouseHover2}">To-Do-List</i>
+    <i></i>
     <i></i>
   </ul>
 
