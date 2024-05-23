@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  todoList      : string    = "";
+  toDoListLis   : string[]  = [];
+
+  addToDo(){
+    this.toDoListLis.push(this.todoList);
+    this.todoList = ""
+  }
+
 }

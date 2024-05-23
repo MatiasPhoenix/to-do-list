@@ -1,2 +1,11 @@
 <div class="text-center">
-</div>
+  <form>
+    <input type="text" name="testo" [(ngModel)]="todoList">
+    <div class="btn btn-primary align-item-center" (click)="addToDo()">Aggiungi</div>
+  </form>
+
+  <div *ngFor="let item of toDoListLis">
+    <p>{{item}}</p>
+  </div>
+
+  </div>
