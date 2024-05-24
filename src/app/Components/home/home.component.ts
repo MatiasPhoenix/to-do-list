@@ -1,3 +1,4 @@
+import { url } from 'inspector';
 import { LocalStoreService } from '../../Service/local-store.service';
 import { Component } from '@angular/core';
 
@@ -24,16 +25,16 @@ export class HomeComponent {
     let numPostIt: number = Math.floor(Math.random() * 4) + 1;
     switch (numPostIt) {
       case 1:
-      return '../../../assets/post-it-01.png'
+      return 'url("../../../assets/post-it-01.png")';
 
       case 2:
-      return '../../../assets/post-it-02.png'
+      return 'url("../../../assets/post-it-02.png")';
 
       case 3:
-      return '../../../assets/post-it-03.png'
+      return 'url("../../../assets/post-it-03.png")';
 
       case 4:
-      return '../../../assets/post-it-04.png'
+      return 'url("../../../assets/post-it-04.png")';
 
       default:
         console.log('non ci sono immagini');
