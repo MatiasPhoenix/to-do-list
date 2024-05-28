@@ -2,16 +2,16 @@
   <form>
     <input type="text" name="testo" [(ngModel)]="toDoItem" />
     <button class="btn btn-primary align-item-center" (click)="addToDo()">
-      Aggiungi
+      New ToDo
     </button>
   </form>
 
   <div class="container">
     <div class="row p-5">
-      <div class="col-3 p-2" *ngFor="let item of toDoList">
+      <div class="col-10 col-md-4 p-2 container" *ngFor="let item of toDoList">
         <div
           class="postIt d-flex align-items-center justify-content-center"
-          [ngStyle]="{ 'background-image': postItMetod() }">
+          [ngStyle]="{ 'background-image': item.postIt}">
           <div>{{ item.text }}</div>
           <span class="mouseHover" (click)="removeToDo(item.text)">
           <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-bookmark-check" viewBox="0 0 16 16">

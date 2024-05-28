@@ -2,7 +2,10 @@ import { url } from 'inspector';
 import { LocalStoreService } from '../../Service/local-store.service';
 import { Component } from '@angular/core';
 
-interface ToDoList {text : string;}
+interface ToDoList {
+  text    : string,
+  postIt  : string
+}
 
 @Component({
   selector: 'app-home',
@@ -17,8 +20,10 @@ export class HomeComponent {
   postIt       : number[]    = [0,1,2,3];
   toDoList     : ToDoList[]  = [];
 
+
   ngOnInit(){
     this.toDoList = this.localStoreService.getToDoList('todos');
+
   }
 
   postItMetod(){
@@ -44,9 +49,19 @@ export class HomeComponent {
 
   }
 
+  mostraPostIt(){
+
+  }
+
   addToDo(){
+    let newPostIt = this.postItMetod();
+    console.log(newPostIt);
+
     if (this.toDoItem.trim()) {
-      const newToDo: ToDoList = { text: this.toDoItem };
+      const newToDo: ToDoList = {
+        text: this.toDoItem,
+        postIt: newPostIt
+      };
       this.toDoList.push(newToDo);
       this.localStoreService.saveToDoList('todos', this.toDoList);
       this.toDoItem = '';
