@@ -49,10 +49,6 @@ export class HomeComponent {
 
   }
 
-  mostraPostIt(){
-
-  }
-
   addToDo(){
     let newPostIt = this.postItMetod();
     console.log(newPostIt);
