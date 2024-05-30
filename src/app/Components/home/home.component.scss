@@ -9,11 +9,12 @@
 }
 .bgToDoList{
   background-image: url('../../../assets/bockground\ toDoList.jpg');
-  height: 100vh;
+  min-height: 100vh;
 
 }
 .postIt{
   background-position: center;
+  background-repeat: no-repeat;
   background-size: contain;
   height: 200px;
 }
